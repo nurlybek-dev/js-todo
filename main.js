@@ -13,6 +13,10 @@ const filters = document.querySelectorAll(".filters li a");
 let listItems = JSON.parse(localStorage.getItem("todoList"));
 let activeFilter = localStorage.getItem("activeFilter");
 
+if (listItems == null) {
+    listItems = {}
+}
+
 if (activeFilter == null) {
     activeFilter = FILTER_ALL;
 }
